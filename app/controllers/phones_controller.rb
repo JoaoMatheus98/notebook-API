@@ -17,17 +17,17 @@ class PhonesController < ApplicationController
 
   def update
     @phone = Phone.find(phone_params[:id])
-    @phone.update(phone_params)
     
-    if @contact.address.update(phone_params)
-      render json: @contact.address
+    if @phone.update(phone_params)
+      render json: @contact.phones
     else
       render json: @contact.errors, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @contact.address.destroy
+    @phone = Phone.find(phone_params[:id])
+    @phone.destroy
   end
 
   private
