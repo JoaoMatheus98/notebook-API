@@ -18,6 +18,7 @@ class PhonesController < ApplicationController
   def update
     @phone = Phone.find(phone_params[:id])
     @phone.update(phone_params)
+    
     if @contact.address.update(phone_params)
       render json: @contact.address
     else
