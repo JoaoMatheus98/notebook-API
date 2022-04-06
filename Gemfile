@@ -19,6 +19,11 @@ gem 'puma', '~> 5.0'
 
 gem 'foreman'
 
+gem 'jwt'
+
+gem 'devise_token_auth'
+gem 'devise-i18n'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+    include DeviseTokenAuth::Concerns::SetUserByToken
     before_action :ensure_json_request
 
     ## Header => Accept: application/vnd.api+json . Else, blank error 406
